@@ -209,6 +209,11 @@ namespace QuanLyBanHang
             tenAnh = Path.GetFileName(openFileDialog1.FileName);
             pictureBox1.Image = Image.FromFile(@"image//laptop//" + tenAnh);
         }
+        public void loadSP()
+        {
+            frmLoaiHang frm = new frmLoaiHang();
+            frm.Show();
+        }
 
         private void cboTK_SelectedIndexChanged(object sender, EventArgs e)
         {
