@@ -59,7 +59,9 @@ namespace QuanLyBanHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-           
+            lh.UpdateLoaiHang(txtMaLH.Text, txtTenLH.Text);
+            MessageBox.Show("Sửa dữ liệu thành công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            HienThi();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -69,23 +71,46 @@ namespace QuanLyBanHang
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-           
+            HienThi();
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
+            btnThem.Enabled = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             
-           
+            if (txtTenLH.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên sản phẩm !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                lh.InsertLoaiHang(txtTenLH.Text);
+                MessageBox.Show("Thêm dữ liệu thành công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                HienThi();               
+                btnLuu.Enabled = false;
+                btnHuy.Enabled = false;
+                btnThem.Enabled = true;
+            }
+            catch { }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            try
+            {
+                txtMaLH.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtTenLH.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();               
+            }
+            catch { }
         }
     }
 }
