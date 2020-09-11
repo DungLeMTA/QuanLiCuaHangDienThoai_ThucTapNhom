@@ -36,6 +36,11 @@ namespace QuanLyBanHang
             int soluong = 0;
             bool a = false;
         }
+        //Them hai cai nay xem lai
+        public void showdig()
+        {
+            load();
+        }
         public void HienThi()
         {
             dataGridView1.DataSource = sp.ShowSanPham("");
