@@ -89,6 +89,7 @@ namespace QuanLyBanHang
             }
             
         }
+        //set null mất cái text box
         public void SetNull()
         {
             txtTK.Text = "";
@@ -98,6 +99,8 @@ namespace QuanLyBanHang
             txtMoTa.Text = "";
             pictureBox1.Image = null;
         }
+
+        //btnLuu.Enabled = true;
         private void btnThem_Click(object sender, EventArgs e)
         {
             SetNull();
@@ -105,7 +108,7 @@ namespace QuanLyBanHang
             txtLoiNhuan.Text = "";
             cboTK.Enabled = false;
             txtTK.Enabled = false;
-            //btnLuu.Enabled = true;
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
