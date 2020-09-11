@@ -49,7 +49,7 @@ namespace QuanLyBanHang
                 dataGridView1.Rows[i].Cells[0].Value = (i + 1).ToString();
             }
             Init();
-        }
+        }//lếu lều
         public void KhoiTaotxtsSP()
         {
             txtTenSP.Text = txtTenNSX.Text = cmbGiaBan.Text = cmbTenLH.Text = "";
