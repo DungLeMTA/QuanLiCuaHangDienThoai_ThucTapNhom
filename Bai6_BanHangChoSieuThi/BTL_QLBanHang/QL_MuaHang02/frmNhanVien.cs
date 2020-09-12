@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BusinessLogic;
 namespace QuanLyBanHang
 {
+
     public partial class frmNhanVien : Form
     {
         public frmNhanVien()
