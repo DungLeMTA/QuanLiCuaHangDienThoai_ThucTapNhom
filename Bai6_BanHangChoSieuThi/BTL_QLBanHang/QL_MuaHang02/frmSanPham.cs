@@ -143,6 +143,7 @@ namespace QuanLyBanHang
                 MessageBox.Show("Không xóa được dữ liệu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //lấy dữ liêuh
         public void GetData()
         {
             try
