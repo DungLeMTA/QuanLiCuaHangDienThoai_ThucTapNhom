@@ -85,6 +85,30 @@ namespace QuanLyBanHang
                 dgvHoaDon.Rows[i].Cells[0].Value = (i + 1).ToString();
         }
 
+        private void dgvCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                lblTenSP.Text = dgvCTHD.Rows[e.RowIndex].Cells[2].Value.ToString();
+                picSP.Image = null;
+                picSP.Image = Image.FromFile(@"image/LapTop//" + sp.LayAnh(dgvCTHD.Rows[e.RowIndex].Cells[1].Value.ToString()));
+                picSP.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            catch { }
+        }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            HienThi();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn Muốn In Hóa Đơn Này?", "Question", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+                frmInHDB frm = new frmInHDB(dgvHoaDon.Rows[dong].Cells[1].Value.ToString(), true);
+                frm.Show();
+            }
+        }
     }
 }
