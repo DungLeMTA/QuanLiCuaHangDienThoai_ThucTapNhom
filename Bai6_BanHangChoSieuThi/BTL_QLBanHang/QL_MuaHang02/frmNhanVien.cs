@@ -10,15 +10,12 @@ using System.Windows.Forms;
 using BusinessLogic;
 namespace QuanLyBanHang
 {
-
     public partial class frmNhanVien : Form
     {
         public frmNhanVien()
         {
             InitializeComponent();
         }
-
-
         NhanVien nv = new NhanVien();
         int chon = 0;
         void KhoaDieuKhien()
@@ -38,32 +35,6 @@ namespace QuanLyBanHang
             txtTenDn.Text = txtMatKhau.Text = txtTenNV.Text = txtSDT.Text = txtDiaChi.Text = cbGT.Text = "";
             tscbGT.Text = tstxtDiaChi.Text = tstxtMa.Text = tstxtTen.Text = "";
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
