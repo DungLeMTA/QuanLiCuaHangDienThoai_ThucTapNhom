@@ -8,6 +8,7 @@ using System.Data;
 
 namespace BusinessLogic
 {
+
     public class LoaiHang
     {
         KetNoiDB da = new KetNoiDB();
