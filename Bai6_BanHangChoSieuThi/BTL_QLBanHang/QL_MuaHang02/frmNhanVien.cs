@@ -66,7 +66,6 @@ namespace QuanLyBanHang
 
 
 
-
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
