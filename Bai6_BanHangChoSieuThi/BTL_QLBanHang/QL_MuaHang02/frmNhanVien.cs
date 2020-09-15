@@ -39,6 +39,34 @@ namespace QuanLyBanHang
             tscbGT.Text = tstxtDiaChi.Text = tstxtMa.Text = tstxtTen.Text = "";
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
