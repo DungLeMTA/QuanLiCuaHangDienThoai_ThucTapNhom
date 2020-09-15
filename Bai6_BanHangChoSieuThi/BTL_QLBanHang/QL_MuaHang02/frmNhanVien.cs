@@ -17,6 +17,8 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
         }
+
+
         NhanVien nv = new NhanVien();
         int chon = 0;
         void KhoaDieuKhien()
