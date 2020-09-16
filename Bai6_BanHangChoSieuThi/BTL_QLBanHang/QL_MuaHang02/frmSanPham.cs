@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using BusinessLogic;
 using Entity;
-
+//kiem tra lai ngay 16/9 khong thay loi
 namespace QuanLyBanHang
 {
     public partial class frmSanPham : Form
@@ -60,7 +60,7 @@ namespace QuanLyBanHang
                     
                     tenAnh = sp.LayAnh(txtMaSP.Text);
                     pictureBox1.Image = Image.FromFile(@"image//laptop//" + tenAnh);  
-                    //pictureBox1.Image = Image.FromFile(@"image//laptop//Khuyenmai.gif");
+                    
                 }
                 catch { }
             }
@@ -144,7 +144,7 @@ namespace QuanLyBanHang
             HienThi();
             cboTK.Enabled = true;
             txtTK.Enabled = true;
-            //btnLuu.Enabled = false;
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
