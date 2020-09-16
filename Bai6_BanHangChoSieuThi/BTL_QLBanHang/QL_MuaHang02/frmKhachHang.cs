@@ -43,8 +43,14 @@ namespace QuanLyBanHang
         }
         public void HienThiDGV()
         {
-           
-        }
+               dgvKhachHang.DataSource = kh.HienThiKhachHang();
+               int i = 0;
+               while (i < dgvKhachHang.Rows.Count - 1)
+               {
+                    dgvKhachHang.Rows[i].Cells[0].Value = (i + 1).ToString();
+                    i++;
+               }
+          }
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
