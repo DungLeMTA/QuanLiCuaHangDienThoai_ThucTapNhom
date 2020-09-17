@@ -54,8 +54,24 @@ namespace QuanLyBanHang
 
         private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-        }
+               btnSua.Enabled = true;
+               btnXoa.Enabled = true;
+               DKOThongTin(false);
+               try
+               {
+                    txtMaKH.Text = dgvKhachHang.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    txttenKH.Text = dgvKhachHang.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    cmbGioiTinh.Text = dgvKhachHang.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    txtDC.Text = dgvKhachHang.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    txtSoDT.Text = dgvKhachHang.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    cmbLoaiKH.Text = dgvKhachHang.Rows[e.RowIndex].Cells[6].Value.ToString();
+                    txtGhichu.Text = dgvKhachHang.Rows[e.RowIndex].Cells[7].Value.ToString();
+               }
+               catch
+               {
+                    return;
+               }
+          }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
