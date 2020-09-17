@@ -45,6 +45,14 @@ namespace QuanLyBanHang
             }
             Init();
         }
+        public void HienThi2()
+        {
+            dgvKhachHang.DataSource = kh.HienThiKhachHang();
+            for (int i = 0; i < dgvKhachHang.RowCount; i++)
+                dgvKhachHang.Rows[i].Cells[0].Value = (i + 1).ToString();
+
+            dgvSanPham.DataSource = sp.HienThiSP_LH();
+        }
         public void Init()
         {
             if (dataGridView1.RowCount > 1)
