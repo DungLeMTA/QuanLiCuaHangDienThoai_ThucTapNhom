@@ -75,8 +75,13 @@ namespace QuanLyBanHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-           
-        }
+               setNULL();
+               DKOThongTin(true);
+               txtMaKH.Enabled = false;
+               btnLuu.Enabled = true;
+               btnSua.Enabled = false;
+               btnXoa.Enabled = false;
+          }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
