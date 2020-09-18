@@ -33,6 +33,8 @@ namespace QuanLyBanHang
             cboLH.SelectedValue = "MaLH";
             cboLH.SelectedIndex = 0;
             cboTK.SelectedIndex = 0;
+            int soluong = 0;
+            bool a = false;
         }
         public void HienThi()
         {
