@@ -85,8 +85,18 @@ namespace QuanLyBanHang
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
-        }
+               if (MessageBox.Show("Bạn có chắc muốn xóa?", "Cảnh báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+               {
+                    try
+                    {
+                         kh.DeleteKhachHang(txtMaKH.Text);
+                         setNULL();
+                         DKOThongTin(false);
+                    }
+                    catch { }
+               }
+               HienThiDGV();
+          }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
