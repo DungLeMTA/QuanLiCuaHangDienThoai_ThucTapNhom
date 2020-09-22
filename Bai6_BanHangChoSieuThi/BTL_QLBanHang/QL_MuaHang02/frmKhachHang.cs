@@ -157,17 +157,29 @@ namespace QuanLyBanHang
 
         private void btnKH_Click(object sender, EventArgs e)
         {
-           
-        }
+               dgvKhachHang.DataSource = kh.Show10KH();
+               int i = 0;
+               while (i < dgvKhachHang.Rows.Count - 1)
+               {
+                    dgvKhachHang.Rows[i].Cells[0].Value = (i + 1).ToString();
+                    i++;
+               }
+          }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-           
-        }
+               HienThiDGV();
+          }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-           
-        }
+               dgvKhachHang.DataSource = kh.ShowKHTHeoNgay(DateTime.Parse(dateTimePicker1.Text), DateTime.Parse(dateTimePicker2.Text));
+               int i = 0;
+               while (i < dgvKhachHang.Rows.Count - 1)
+               {
+                    dgvKhachHang.Rows[i].Cells[0].Value = (i + 1).ToString();
+                    i++;
+               }
+          }
     }
 }
