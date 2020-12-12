@@ -157,7 +157,7 @@
             // 
             this.txtTenLH.Location = new System.Drawing.Point(143, 109);
             this.txtTenLH.Name = "txtTenLH";
-            this.txtTenLH.Size = new System.Drawing.Size(173, 25);
+            this.txtTenLH.Size = new System.Drawing.Size(173, 29);
             this.txtTenLH.TabIndex = 30;
             // 
             // txtMaLH
@@ -165,26 +165,26 @@
             this.txtMaLH.Enabled = false;
             this.txtMaLH.Location = new System.Drawing.Point(143, 43);
             this.txtMaLH.Name = "txtMaLH";
-            this.txtMaLH.Size = new System.Drawing.Size(173, 25);
+            this.txtMaLH.Size = new System.Drawing.Size(173, 29);
             this.txtMaLH.TabIndex = 29;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 117);
+            this.label2.Location = new System.Drawing.Point(15, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
+            this.label2.Size = new System.Drawing.Size(121, 21);
             this.label2.TabIndex = 28;
             this.label2.Text = "Tên Loại Hàng";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 51);
+            this.label1.Location = new System.Drawing.Point(20, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(116, 21);
             this.label1.TabIndex = 27;
             this.label1.Text = "Mã Loại Hàng";
             // 
@@ -199,6 +199,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridView1.Location = new System.Drawing.Point(9, 193);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(593, 255);
             this.dataGridView1.TabIndex = 1;
@@ -207,6 +208,7 @@
             // Column3
             // 
             this.Column3.HeaderText = "STT";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 50;
             // 
@@ -215,6 +217,7 @@
             this.Column1.DataPropertyName = "MaLH";
             this.Column1.FillWeight = 136.0544F;
             this.Column1.HeaderText = "Mã Loại Hàng";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 150;
             // 
@@ -224,11 +227,12 @@
             this.Column2.DataPropertyName = "TenLH";
             this.Column2.FillWeight = 63.94557F;
             this.Column2.HeaderText = "Tên Loại Hàng";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // frmLoaiHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 460);
             this.Controls.Add(this.dataGridView1);

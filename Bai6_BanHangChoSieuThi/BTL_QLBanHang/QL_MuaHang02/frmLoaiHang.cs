@@ -64,7 +64,7 @@ namespace QuanLyBanHang
             HienThi();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
             {
@@ -116,6 +116,7 @@ namespace QuanLyBanHang
             }
             catch { }
         }
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
