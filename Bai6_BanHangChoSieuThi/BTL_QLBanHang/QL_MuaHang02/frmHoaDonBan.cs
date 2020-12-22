@@ -37,7 +37,15 @@ namespace QuanLyBanHang
             dgvCTHD.DataSource = cthdb.HienThiCTHDB();
         }
 
-      
+        private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                dgvCTHD.DataSource = cthdb.HienThiCTHDB(dgvHoaDon.Rows[e.RowIndex].Cells[1].Value.ToString());
+                dong = e.RowIndex;
+            }
+            catch { }
+        }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
@@ -64,6 +72,13 @@ namespace QuanLyBanHang
             HienThi();
         }
 
-        
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn Muốn In Hóa Đơn Này?", "Question", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+                frmInHDB frm = new frmInHDB(dgvHoaDon.Rows[dong].Cells[1].Value.ToString(), true);
+                frm.Show();
+            }
+        }
     }
 }
