@@ -64,7 +64,59 @@ namespace QuanLyBanHang
             HienThi();
         }
 
-        
+         private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa dữ liệu không ???", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (dataGridView1.SelectedRows.Count == 1) lh.DeleteLoaiHang(txtMaLH.Text);
+                    else if (dataGridView1.SelectedRows.Count > 1)
+                    {
+                        for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                        {
+                            lh.DeleteLoaiHang(dataGridView1.Rows[dataGridView1.SelectedRows[i].Index].Cells[1].Value.ToString());
+                        }
+                    }
+                    HienThi();
+                    MessageBox.Show("Xóa dữ liệu thành công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Không xóa được dữ liệu !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            HienThi();
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
+            btnThem.Enabled = true;
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            
+            if (txtTenLH.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên sản phẩm !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                lh.InsertLoaiHang(txtTenLH.Text);
+                MessageBox.Show("Thêm dữ liệu thành công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                HienThi();               
+                btnLuu.Enabled = false;
+                btnHuy.Enabled = false;
+                btnThem.Enabled = true;
+            }
+            catch { }
+        }
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
