@@ -343,3 +343,6 @@ E:\Thuc tap nhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\bin\Debug\QLB
 E:\Thuc tap nhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\bin\Debug\QLBanHangKetNoiData.pdb
 E:\Thuc tap nhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\bin\Debug\QuanLyBanHangEntity.pdb
 E:\Thuc tap nhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\obj\Debug\QuanLyBanHang.csproj.CopyComplete
+C:\Users\HP\Documents\GitHub\QuanLiCuaHangDienThoai_ThucTapNhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\obj\Debug\QuanLyBanHang.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\QuanLiCuaHangDienThoai_ThucTapNhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\obj\Debug\QL_MuaHang02.exe
+C:\Users\HP\Documents\GitHub\QuanLiCuaHangDienThoai_ThucTapNhom\Bai6_BanHangChoSieuThi\BTL_QLBanHang\QL_MuaHang02\obj\Debug\QL_MuaHang02.pdb
