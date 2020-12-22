@@ -54,7 +54,37 @@ namespace QuanLyBanHang
                 dgvHoaDon.Rows[i].Cells[0].Value = (i + 1).ToString();
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgvHoaDon.DataSource = hdb.HienThiHDB(DateTime.Parse(dateTimePicker1.Text), DateTime.Parse(dateTimePicker2.Text));
+            for (int i = 0; i < dgvHoaDon.RowCount - 1; i++)
+                dgvHoaDon.Rows[i].Cells[0].Value = (i + 1).ToString();
+        }
+
+        private void btnMuaMax_Click(object sender, EventArgs e)
+        {
+            dgvHoaDon.DataSource = hdb.HienThiTop10HDB();
+            for (int i = 0; i < dgvHoaDon.RowCount - 1; i++)
+                dgvHoaDon.Rows[i].Cells[0].Value = (i + 1).ToString();
+        }
+        private void comboBoxThongKeTien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxThongKeTien.Text == "<= 500.000")
+                dgvHoaDon.DataSource = hdb.HienThiHDB(0, 500000);
+            else if (comboBoxThongKeTien.Text == "500.000 -> 2.000.000")
+                dgvHoaDon.DataSource = hdb.HienThiHDB(500000, 2000000);
+            else if (comboBoxThongKeTien.Text == "2.000.000 -> 5.000.000")
+                dgvHoaDon.DataSource = hdb.HienThiHDB(2000000, 5000000);
+            else if (comboBoxThongKeTien.Text == "5.000.000 -> 10.000.000")
+                dgvHoaDon.DataSource = hdb.HienThiHDB(5000000, 10000000);
+            else if (comboBoxThongKeTien.Text == "> 10.000.000")
+                dgvHoaDon.DataSource = hdb.HienThiHDB(10000000, 10000000000);
+            else dgvHoaDon.DataSource = hdb.HienThiTop10HDB();
+
+            for (int i = 0; i < dgvHoaDon.RowCount - 1; i++)
+                dgvHoaDon.Rows[i].Cells[0].Value = (i + 1).ToString();
+        }
+
         private void dgvCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
